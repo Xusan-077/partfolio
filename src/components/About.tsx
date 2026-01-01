@@ -54,7 +54,7 @@ export default function About() {
           <div className="flex flex-col items-center mb-10">
             <h2 className="text-[40px] font-bold text-[#FEFEFE]">About Me</h2>
             <p className="text-[20px] font-medium text-[#707070]">
-              User Interface and User Experience and Also video editing
+              Frontend Developer with a strong background in UI/UX Design
             </p>
           </div>
           <div className="flex items-center justify-between mb-25">
@@ -66,20 +66,7 @@ export default function About() {
             </div>
             <div className="">
               <p className="text-[20px] max-w-155 font-medium text-[#959595] mb-10">
-                A software engineer, the modern-day architect of digital realms,
-                navigates the ethereal landscapes of code, sculpting intangible
-                structures that shape our technological world. With fingers
-                poised over keyboards like virtuoso pianists, they compose
-                symphonies of logic, their minds a labyrinth of algorithms and
-                solutions.Their canvas is a screen, a vast expanse where lines
-                of code dance in intricate patterns, weaving the fabric of
-                programs and applications. Each keystroke is a brushstroke,
-                crafting intricate architectures and breathing life into
-                innovative designs.In this digital atelier, they don the mantle
-                of problem solvers, confronting bugs and glitches like valiant
-                knights in an ever-evolving quest for perfection. Debugging
-                becomes a noble pursuit, unraveling the mysteries hidden within
-                the tangled webs of code. designs.In this digital atelier.
+               A Front end developer 
               </p>
               <button className="flex items-center rounded-lg p-[12px_30px] bg-gradient-to-r from-[#FD6F00] to-[#E46400]">
                 <img src={downloadIcon} alt="" />
