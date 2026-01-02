@@ -1,6 +1,3 @@
-import linkedinIcon from "../assets/icons/linkedin.svg";
-import instagramIcon from "../assets/icons/instagram.svg";
-
 import mailIcon from "../assets/icons/mail.svg";
 import phoneIcon from "../assets/icons/phone.svg";
 import { NavHashLink } from "react-router-hash-link";
