@@ -1,5 +1,4 @@
 import downloadIcon from "../assets/icons/Download.svg";
-import person from "../assets/images/person-2.png";
 import SkillBar from "./SkillBar";
 
 interface Ipercentages {
