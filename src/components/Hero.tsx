@@ -1,7 +1,6 @@
-import linkedinIcon from "../assets/icons/linkedin.svg";
-import instagramIcon from "../assets/icons/instagram.svg";
-
 import TechOrbit from "./TechOrbit";
+import { SocialMedia } from "../constants";
+import SocialMediaLink from "./SocialMediaLink";
 
 export default function Hero() {
   return (
@@ -29,16 +28,9 @@ export default function Hero() {
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              <div className="bg-[#1C1A19FF] flex items-center justify-center w-10 h-10 rounded-[50%] border border-[#575757]">
-                <a href="">
-                  <img className="w-6 h-6" src={instagramIcon} alt="" />
-                </a>
-              </div>
-              <div className="bg-[#1C1A19FF] flex items-center justify-center w-10 h-10 rounded-[50%] border border-[#575757]">
-                <a href="">
-                  <img className="w-6 h-6" src={linkedinIcon} alt="" />
-                </a>
-              </div>
+              {SocialMedia.map((el) => (
+                <SocialMediaLink item={el} key={el.id} />
+              ))}
             </div>
             <div className="mb-20" data-aos="fade-up" data-aos-delay="600">
               <button className="border-2 cursor-pointer border-[#959595] p-[12px_40px] rounded-lg text-[#959595] text-5 font-bold">

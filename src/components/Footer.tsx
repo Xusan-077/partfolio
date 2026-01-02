@@ -4,7 +4,8 @@ import instagramIcon from "../assets/icons/instagram.svg";
 import mailIcon from "../assets/icons/mail.svg";
 import phoneIcon from "../assets/icons/phone.svg";
 import { NavHashLink } from "react-router-hash-link";
-import { navLinks } from "../constants";
+import { NavLinks, SocialMedia } from "../constants";
+import SocialMediaLink from "./SocialMediaLink";
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
           </h2>
 
           <nav className="flex flex-wrap max-[350px]:flex-col justify-center items-center m-[10px_0]">
-            {navLinks.map((el, index) => (
+            {NavLinks.map((el, index) => (
               <NavHashLink
                 smooth
                 key={index}
@@ -32,16 +33,9 @@ export default function Footer() {
           </nav>
 
           <div className="flex items-center gap-5 mb-15">
-            <div className="bg-[#1C1A19FF] flex items-center justify-center w-10 h-10 rounded-[50%] border border-[#575757]">
-              <a href="">
-                <img className="w-6 h-6" src={instagramIcon} alt="" />
-              </a>
-            </div>
-            <div className="bg-[#1C1A19FF] flex items-center justify-center w-10 h-10 rounded-[50%] border border-[#575757]">
-              <a href="">
-                <img className="w-6 h-6" src={linkedinIcon} alt="" />
-              </a>
-            </div>
+            {SocialMedia.map((el) => (
+              <SocialMediaLink item={el} key={el.id} />
+            ))}
           </div>
 
           <div className="flex gap-10 flex-wrap justify-center">

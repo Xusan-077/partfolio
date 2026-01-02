@@ -22,7 +22,14 @@ export interface Iportfolios {
   link: string;
 }
 
-export const navLinks: Inav[] = [
+export interface ISocialMedia {
+  id: number;
+  label: string;
+  link: string;
+  icon: string;
+}
+
+export const NavLinks: Inav[] = [
   {
     label: "Home",
     link: "/#home",
@@ -107,5 +114,38 @@ export const Portfolios: Iportfolios[] = [
     link: "https://full-library-project.netlify.app",
     image: portfolioImg11,
     name: "Library Space",
+  },
+];
+
+export const SocialMedia: ISocialMedia[] = [
+  {
+    id: 1,
+    label: "GitHub",
+    link: "https://github.com/Xusan-077",
+    icon: "bi bi-github",
+  },
+  {
+    id: 2,
+    label: "Instagram",
+    link: "https://instagram.com/xusan__077__",
+    icon: "bi bi-instagram",
+  },
+  {
+    id: 3,
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/xusan-yarashov-51223239b",
+    icon: "bi bi-linkedin",
+  },
+  {
+    id: 4,
+    label: "Telegram",
+    link: "https://t.me/Xusan_Yarashov",
+    icon: "bi bi-telegram",
+  },
+  {
+    id: 5,
+    label: "Facebook",
+    link: "https://www.facebook.com/people/Xusan-Yarashov/pfbid0CcD7V5dyaSRF2ZqD2dmmRjv19Fd4Cbn447Mf1auHJHoF3cteZXn81cZF54WnUhNBl/",
+    icon: "bi bi-facebook",
   },
 ];

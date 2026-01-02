@@ -40,19 +40,12 @@ export default function Portfolio() {
             <ul
               className={`${
                 isMobile
-                  ? "flex flex-row gap-6" // Mobil uchun carousel qatori
-                  : "grid grid-cols-1 min-[550px]:grid-cols-2 lg:grid-cols-3 gap-6" // Sizning avvalgi Grid dizayningiz
+                  ? "flex flex-row gap-6"
+                  : "grid grid-cols-1 min-[550px]:grid-cols-2 lg:grid-cols-3 gap-6"
               }`}
             >
               {Portfolios?.map((el) => (
-                <li
-                  key={el.id}
-                  className={`${
-                    isMobile ? "flex-[0_0_100%] min-w-0" : "w-full"
-                  }`}
-                >
-                  <PortfoliosItem portfolio={el} />
-                </li>
+                <PortfoliosItem key={el.id} portfolio={el} />
               ))}
             </ul>
           </div>

@@ -1,5 +1,5 @@
 import { NavHashLink } from "react-router-hash-link";
-import { navLinks } from "../constants";
+import { NavLinks } from "../constants";
 import { useEffect, useState, useRef } from "react";
 
 export default function Header() {
@@ -39,7 +39,7 @@ export default function Header() {
           </h2>
 
           <nav className="hidden md:block">
-            {navLinks.map((el, index) => (
+            {NavLinks.map((el, index) => (
               <NavHashLink
                 smooth
                 key={index}
@@ -82,7 +82,7 @@ export default function Header() {
           md:hidden z-40`}
         >
           <nav className="flex flex-col py-4">
-            {navLinks.map((el, index) => (
+            {NavLinks.map((el, index) => (
               <NavHashLink
                 key={index}
                 to={el.link}
