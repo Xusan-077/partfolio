@@ -4,7 +4,7 @@ import instagramIcon from "../assets/icons/instagram.svg";
 import mailIcon from "../assets/icons/mail.svg";
 import phoneIcon from "../assets/icons/phone.svg";
 import { NavHashLink } from "react-router-hash-link";
-import { navLinks } from "../constants/nav";
+import { navLinks } from "../constants";
 
 export default function Footer() {
   return (

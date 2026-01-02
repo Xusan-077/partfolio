@@ -1,5 +1,5 @@
 import { NavHashLink } from "react-router-hash-link";
-import { navLinks } from "../constants/nav";
+import { navLinks } from "../constants";
 import { useEffect, useState, useRef } from "react";
 
 export default function Header() {
