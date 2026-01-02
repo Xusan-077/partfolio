@@ -18,6 +18,7 @@ export default function CircularSkill({ name, percentage }: Props) {
             textColor: "#FD6F00",
             trailColor: "#333333",
             textSize: "25px",
+            pathTransitionDuration: 1.5,
           })}
         />
       </div>

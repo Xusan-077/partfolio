@@ -1,10 +1,10 @@
 import { NavHashLink } from "react-router-hash-link";
 import { navLinks } from "../constants/nav";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function Header() {
   const [showHeader, setShowHeader] = useState(true);
-  const [lastScroll, setLastScroll] = useState(0);
+  const lastScroll = useRef(0);
   const [burgerShown, setBurgerShown] = useState<boolean>(false);
 
   useEffect(() => {
@@ -14,17 +14,17 @@ export default function Header() {
       // Agar burger menyu ochiq bo'lsa, header yashirinmasligi kerak
       if (burgerShown) return;
 
-      if (currentScroll > lastScroll && currentScroll > 100) {
+      if (currentScroll > lastScroll.current && currentScroll > 100) {
         setShowHeader(false);
       } else {
         setShowHeader(true);
       }
-      setLastScroll(currentScroll);
+      lastScroll.current = currentScroll;
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScroll, burgerShown]);
+  }, [burgerShown]);
 
   return (
     <header
@@ -55,10 +55,10 @@ export default function Header() {
             onClick={() => setBurgerShown(!burgerShown)}
             className="hidden max-[768px]:block z-50 relative"
           >
-            <div className="flex flex-col gap-[6px] w-9">
+            <div className="flex flex-col gap-1.5 w-9">
               <div
                 className={`h-1 bg-[#959595] rounded-full transition-all duration-300 origin-left 
-                ${burgerShown ? "rotate-[42deg] w-[38px]" : "w-9"}`}
+                ${burgerShown ? "rotate-45 w-9.5" : "w-9"}`}
               ></div>
               <div
                 className={`h-1 bg-[#959595] rounded-full transition-all duration-300 
@@ -66,11 +66,7 @@ export default function Header() {
               ></div>
               <div
                 className={`h-1 bg-[#959595] rounded-full transition-all duration-300 origin-left 
-                ${
-                  burgerShown
-                    ? "-rotate-[42deg] w-[38px] translate-y-[5px]"
-                    : "w-9"
-                }`}
+                ${burgerShown ? "-rotate-45 w-9.5 translate-y-[5px]" : "w-9"}`}
               ></div>
             </div>
           </button>

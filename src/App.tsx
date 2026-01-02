@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
 import { useEffect, useState } from "react";
+import AOS from "aos";
 
 export default function App() {
   const [scroll, setScroll] = useState<number>(0);
@@ -25,6 +26,15 @@ export default function App() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      easing: "ease-in-out",
+      mirror: true,
+    });
+  }, []);
 
   return (
     <>

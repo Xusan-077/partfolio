@@ -87,13 +87,15 @@ export default function About() {
                 </button>
               </div>
             </div>
-            <div className="grid grid-cols-4 gap-8 max-[1024px]:grid-cols-3 max-[425px]:grid-cols-2 max-[1024px]:gap-4">
+            <div className="grid grid-cols-4 gap-8 max-[450px]:grid-cols-2 max-[768px]:grid-cols-3">
               {percentages.map((el, index) => (
-                <SkillBar
+                <div
                   key={`${index}-${el.name}`}
-                  name={el.name}
-                  percentage={el.percentage}
-                />
+                  data-aos="fade-up"
+                  data-aos-delay={index * 50}
+                >
+                  <SkillBar name={el.name} percentage={el.percentage} />
+                </div>
               ))}
             </div>
           </div>

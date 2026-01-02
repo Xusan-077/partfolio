@@ -98,6 +98,8 @@ export default function Portfolio() {
             <ul className="grid grid-cols-3 gap-4 max-[1024px]:grid-cols-2">
               {portfolios.map((el, index) => (
                 <li
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
                   key={`${index}-${el.name}`}
                   className="flex-[0_0_85%] min-w-0 min-[550px]:flex-none bg-[#252525] rounded-xl overflow-hidden border border-transparent hover:border-[#FD6F00] transition-all group shadow-lg"
                 >
@@ -143,6 +145,8 @@ export default function Portfolio() {
             <ul className="flex flex-row min-[550px]:grid min-[550px]:grid-cols-2 lg:grid-cols-3 gap-6">
               {portfolios.map((el, index) => (
                 <li
+                  data-aos="fade-up"
+                  data-aos-delay={index * 150}
                   key={`${index}-${el.name}`}
                   className="flex-[0_0_85%] min-w-0 min-[550px]:flex-none bg-[#252525] rounded-xl overflow-hidden border border-transparent hover:border-[#FD6F00] transition-all group shadow-lg"
                 >
