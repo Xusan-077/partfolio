@@ -9,6 +9,7 @@ import portfolioImg8 from "../assets/images/portfolioImg-8.png";
 import portfolioImg9 from "../assets/images/portfolioImg-9.png";
 import portfolioImg10 from "../assets/images/portfolioImg-10.png";
 import portfolioImg11 from "../assets/images/portfolioImg-11.png";
+import portfolioImg12 from "../assets/images/portfolioImg-12.png";
 
 interface Inav {
   label: string;
@@ -51,66 +52,72 @@ export const NavLinks: Inav[] = [
 export const Portfolios: Iportfolios[] = [
   {
     id: 1,
+    link: "https://stream-vibe-green.vercel.app",
+    image: portfolioImg12,
+    name: "Stream Vibe",
+  },
+  {
+    id: 2,
     link: "https://project-of-weather.netlify.app",
     image: portfolioImg1,
     name: "Weather",
   },
   {
-    id: 2,
+    id: 3,
     link: "https://first-reactproject.netlify.app",
     image: portfolioImg2,
     name: "Logoipsum",
   },
   {
-    id: 3,
+    id: 4,
     link: "https://second-reactproject.netlify.app",
     image: portfolioImg3,
     name: "Royal Park",
   },
   {
-    id: 4,
+    id: 5,
     link: "https://positivus-project.netlify.app",
     image: portfolioImg4,
     name: "Positivus",
   },
   {
-    id: 5,
+    id: 6,
     link: "https://project-of-foods.netlify.app",
     image: portfolioImg5,
     name: "Restaurant",
   },
   {
-    id: 6,
+    id: 7,
     link: "https://project-woodendot.netlify.app",
     image: portfolioImg6,
     name: "Woodendot",
   },
   {
-    id: 7,
+    id: 8,
     link: "https://project-orderuk.netlify.app",
     image: portfolioImg7,
     name: "Order",
   },
   {
-    id: 8,
+    id: 9,
     link: "https://first-project-router.netlify.app",
     image: portfolioImg8,
     name: "Finsweet",
   },
   {
-    id: 9,
+    id: 10,
     link: "https://project-online-shop.netlify.app",
     image: portfolioImg9,
     name: "Uzum market clone",
   },
   {
-    id: 10,
+    id: 11,
     link: "https://project-of-seedra.netlify.app",
     image: portfolioImg10,
     name: "Seedra",
   },
   {
-    id: 11,
+    id: 12,
     link: "https://full-library-project.netlify.app",
     image: portfolioImg11,
     name: "Library Space",
